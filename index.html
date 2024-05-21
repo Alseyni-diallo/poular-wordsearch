@@ -8,18 +8,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="container">
-    <h1> </h1>
-    <table id="word-search-grid"></table>
-    <div id="word-list">
-      <h3>:𞤑𞤮𞤲𞤺𞤵𞤯𞤭 𞤯𞤢𞤩𞥆𞤫𞤼𞤫𞥅𞤯𞤭 𞤯𞤭𞤲</h3>
-      <ul></ul>
+  <div id="start-page">
+    <h1 class="start-title">𞤑𞤮𞤲𞤺𞤵𞤣𞤭 𞤅𞤵𞥅𞤣𞤭𞥅𞤯𞤭</h1>
+    
+    <div id="topic-buttons">
+      <button class="topic-button" data-topic="adlam">𞤊𞤭𞥅 𞤀𞤣𞤤𞤢𞤥</button>
+      <button class="topic-button" data-topic="animals">𞤑𞤵𞤤𞥆𞤫 𞤯𞤫𞤲</button>
+      <button class="topic-button" data-topic="months">𞤂𞤫𞤦𞥆𞤭 𞤯𞤭𞤲</button>
+      <button class="topic-button" data-topic="days"> 𞤻𞤢𞤤𞤢𞥄𞤯𞤫 𞤯𞤫𞤲</button>
     </div>
-    <div id="congrats-message" class="popup">
-      <p>𞤋𞤧𞤳𞤵𞤲 𞤥𞤢𞥄⹁ 𞤢 𞤴𞤭𞥅𞤼𞤵 𞤳𞤮𞤲𞤺𞤵𞤯𞤭 𞤯𞤵𞤲</p>
-      <button id="restart-button">𞤬𞤵𞤯𞥆𞤭𞤼𞤢𞤺𞤮𞤤</button>
+
+    <div id="custom-topic-section">
+        <h3 style="font-family: Noto Sans Adlam;">𞤱𞤭𞤲𞤣𞤵 𞤳𞤮𞤲𞤺𞤵𞤣𞤭 𞤧𞤫𞥅𞤣𞤢 𞤧𞤭 𞤸𞤭𞤣𞤢 𞤬𞤢𞥄𞤤𞤢</h3>
+        <table>
+            <tbody>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                <tr><td><inputtype="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+                </tr ><tr><td><input type="text"></td></tr>
+            </tbody>
+        </table>
+        <button id="custom-topic-button" data-topic="custom" class="topic-button">𞤥𞤭 𞤺𞤢𞤴𞤲𞤭𞥅 𞤱𞤭𞤲𞤣𞤵𞤣𞤫 </button>
     </div>
+
   </div>
+
+ <div id="game-container" style="display: none;">
+    <h1 class="game-title">𞤑𞤮𞤲𞤺𞤵𞤣𞤭 𞤅𞤵𞥅𞤣𞤭𞥅𞤯𞤭</h1>
+    
+    <div id="game-content">
+        <div id="word-search-area">
+            <table id="word-search-grid"></table>
+        </div>
+        
+        <div id="controls-and-list">
+            <div id="game-controls">
+                <button id="new-words-button">𞤳𞤮𞤲𞤺𞤵𞤣𞤭 𞤳𞤫𞤧𞤭</button>
+                <button id="go-home-button">𞤊𞤵𞤯𞥆𞤭𞤼𞤢𞤺𞤮𞤤</button>
+            </div>
+
+            <div id="word-list">
+                <h3 style="font-family: Noto Sans Adlam;">:𞤳𞤮𞤲𞤺𞤵𞤣𞤭 𞤣𞤭𞤲</h3>
+                <div id="word-list-box">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
   <script src="script.js"></script>
 </body>
 </html>
