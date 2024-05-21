@@ -1,6 +1,101 @@
-#container {
-    display: flex; /* Use flexbox for layout */
+body {
+    background-color: #f5f5f5; /* Light background color */
+    font-family: "Adlam Display", sans-serif; /* Ensure Adlam font is used */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make sure flexbox covers full viewport height */
   }
+  
+  /* Color palette for found words */
+  .found-word-1 { background-color: #8ECAE6; } 
+  .found-word-2 { background-color: #219EBC; } 
+  .found-word-3 { background-color: #669BBC; } 
+  .found-word-4 { background-color: #FFB703; } 
+  .found-word-5 { background-color: #FB8500; } 
+  .found-word-6 { background-color: #EF476F; } 
+  .found-word-7 { background-color: #FFD166; } 
+  .found-word-8 { background-color: #06D6A0; }
+  .found-word-9 { background-color: #118AB2; } 
+  .found-word-10 { background-color: #4cc9f0; }
+  
+  /* Start Page Styles */
+  #start-page {
+    background-color: #fff; /* White background for the start page */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+  }
+  
+  .start-title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333; /* Dark gray title */
+    font-family: "Noto Sans Adlam", sans-serif;
+  }
+  
+  #topic-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Add spacing between buttons */
+    margin-bottom: 20px;
+  }
+  
+  .topic-button {
+    padding: 10px 20px;
+    background-color: #4681f4; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: "Noto Sans Adlam";
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  .topic-button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  
+  
+  
+  
+  /* Game Page Styles */
+  #game-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* Arrange title and content vertically */
+      align-items: center;
+  }
+  
+  .game-title {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-family: "Noto Sans Adlam";
+      color: #333;
+  }
+  
+  #game-content {
+      display: flex; /* Arrange grid and list side-by-side */
+      gap: 20px; /* Add spacing between elements */
+  }
+  
+  #word-search-area {
+      border: none;
+      border-radius: 8px;
+  }
+  
+  #content-container {
+    display: flex;
+    align-items: flex-start; /* Align the table and word list to the top */
+  }
+  
   
   #word-search-grid {
     margin-right: 100px; /* Add spacing between grid and word list */
@@ -23,7 +118,7 @@
   /* ... (previous styles) ... */
   
   #word-search-grid td.selected {
-    background-color: yellow; /* Highlight selected cells */
+    background-color: lightblue; /* Highlight selected cells */
   }
   
   
@@ -32,21 +127,34 @@
     font-weight: bold;
   } 
   
-  /* ... (your existing styles) ... */
+  
   #word-list {
     margin-top: 20px;
     text-align: right;
+  }
+  
+  #word-list-box {
+    background-color: #e6f2ff; /* Light blue background */
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  #word-list ul {
+    padding: 0;
+    margin: 0;
   }
   
   #word-list li {
     list-style: none;
     margin-bottom: 5px;
     font-family: "Noto Sans Adlam", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
   }
   
   #word-list li.found {
-    text-decoration: line-through; /* Scratch out found words */
+    opacity: 0.5; /* Example: 50% opacity */
+    /*text-decoration: line-through;*/ /* Scratch out found words */
   }
   
   #congrats-message {
@@ -59,18 +167,44 @@
     text-align: center;
     font-family: "Noto Sans Adlam", sans-serif;
   }
-  /* Popup Styles */
-  .popup {
-    display: none; /* Hide by default */
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 10;
-    text-align: center;
+  
+  
+  
+  #custom-topic-section {
+    margin-top: 20px; /* Add some spacing */
+  }
+  
+  #custom-topic-section table {
+    margin: 0 auto; /* Center the table */
+    width: 200px; /* Adjust the width as needed */
+  }
+  
+  #custom-topic-section input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  #game-controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  #game-controls button {
+    margin-bottom: 10px; /* Add spacing between buttons */
+    padding: 8px 12px;
+    background-color: #4681f4; /* */
+    color: white;
+    font-family: "Noto Sans Adlam", sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #game-controls button:hover{
+    background-color: #3e8e41;
   }
   
   
